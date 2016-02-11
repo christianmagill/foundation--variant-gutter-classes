@@ -1,8 +1,3 @@
-$grid-column-variant-gutter: (
-        'half' : .5,
-        'double' : 2
-);
-
 @mixin generate-variant-gutter-classes(){
   @each $s, $m in $grid-column-variant-gutter{
     @each $bp, $w in $grid-column-responsive-gutter{
