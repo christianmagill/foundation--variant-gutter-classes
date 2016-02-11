@@ -1,0 +1,23 @@
+$grid-column-variant-gutter: (
+        'half' : .5,
+        'double' : 2
+);
+
+@mixin generate-variant-gutter-classes(){
+  @each $s, $m in $grid-column-variant-gutter{
+    @each $bp, $w in $grid-column-responsive-gutter{
+      $adjustment: 0.5 * $w * $m;
+      .gutter-#{$s}
+      {
+        margin-left: rem-calc($adjustment * -1) !important;
+        margin-right: rem-calc($adjustment * -1) !important;
+      }
+      .gutter-#{$s} > .columns,
+      .gutter-#{$s} > .column
+      {
+        padding-left: rem-calc($adjustment) !important;
+        padding-right: rem-calc($adjustment) !important;
+      }
+    }
+  }
+}
