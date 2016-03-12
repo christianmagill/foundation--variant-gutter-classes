@@ -1,5 +1,5 @@
 {
-  "name": "foundation-variant-gutter-classes",
+  "name": "foundation--variant-gutter-classes",
   "version": "1.0.0",
   "main": [
     "scss/main.scss"
